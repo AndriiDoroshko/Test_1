@@ -7,8 +7,6 @@
 
 import UIKit
 import Alamofire
-import Realm
-import RealmSwift
 
 class ViewController: UIViewController {
 
@@ -26,13 +24,6 @@ class ViewController: UIViewController {
             
         }
     }
-    
-    func saveData() {
-        let realm = try! Realm()
-        
-        try! realm.write({
-//            realm.add("Response")
-        })
-    }
+
 }
 
