@@ -8,6 +8,35 @@
 import UIKit
 import Alamofire
 
+class Veachle {
+    var title: String
+    
+    init(title: String) {
+        self.title = title
+    }
+}
+
+extension Veachle {
+    func upgradeTitle(newTitle: String) {
+        self.title = newTitle
+    }
+}
+
+class Car: Veachle {
+    var engine: String
+    var brand: String
+    
+    init(engine: String, brand: String, title: String) {
+        self.engine = engine
+        self.brand = brand
+        super.init(title: title)
+    }
+    
+    func upgradeEngine(newEngine: String) {
+        self.engine = newEngine
+    }
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var cityLabel: UILabel!
@@ -66,19 +95,36 @@ class ViewController: UIViewController {
         .response {[weak self] response in
             if let data = response.data {
                 let stringData = String(data: data, encoding: .utf8)
-                
-                do  {
-                    let weatherData = try JSONDecoder().decode(WeatherData.self, from: data)
-                    DispatchQueue.main.async {
-                        self?.cityLabel.text = weatherData.location.name
-                    }
-                   
-                    print(weatherData)
-                } catch (let error) {
-                    print(error)
-                }
-               
+                self?.decodeWeatherData(data)
+            } else if let error = response.error {
+                self?.present(UIAlertController(title: "Error",
+                                                message: error.errorDescription,
+                                                preferredStyle: .alert),
+                              animated: true)
             }
+        }
+    }
+    
+    func decodeWeatherData(_ data: Data) {
+        do  {
+            let weatherData = try JSONDecoder().decode(WeatherData.self, from: data)
+            displayData(weatherData: weatherData)
+        } catch (let error) {
+            present(UIAlertController(title: "Decoding error",
+                                      message: error.localizedDescription,
+                                      preferredStyle: .alert),
+                    animated: true)
+        }
+    }
+    
+    func displayData(weatherData: WeatherData) {
+        DispatchQueue.main.async { [weak self] in
+            self?.cityLabel.text = weatherData.location.name
+            self?.ragionLabel.text = weatherData.location.region + ", " + weatherData.location.country
+            self?.tempratureLabel.text = "\(weatherData.current.temp_c)"
+            self?.conditionLabel.text = weatherData.current.condition.text
+            self?.dayOrNightLabel.text = weatherData.current.is_day == 1 ? "Day" : "Night"
+            self?.timeLabel.text = weatherData.location.localtime
         }
     }
 
@@ -92,6 +138,8 @@ struct Location: Codable {
 }
 
 struct Current: Codable {
+    let temp_c: Double
+    let is_day: Int
     let condition: Condition
 }
 
