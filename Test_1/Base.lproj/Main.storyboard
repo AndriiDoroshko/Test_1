@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,17 +46,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q7-um-qjQ">
-                                <rect key="frame" x="16" y="262" width="103" height="54"/>
+                                <rect key="frame" x="16" y="262" width="165" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="G9y-jb-mq7"/>
-                                    <constraint firstAttribute="width" constant="103" id="dgC-7s-r8i"/>
+                                    <constraint firstAttribute="height" constant="70" id="G9y-jb-mq7"/>
+                                    <constraint firstAttribute="width" constant="165" id="dgC-7s-r8i"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="54"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNe-eN-C34">
-                                <rect key="frame" x="16" y="324" width="65" height="21"/>
+                                <rect key="frame" x="16" y="340" width="65" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WH-6T-DsE">
-                                <rect key="frame" x="15" y="353" width="77" height="35"/>
+                                <rect key="frame" x="15" y="369" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="more..."/>
                             </button>
@@ -90,16 +90,6 @@
                             <constraint firstItem="hlC-du-GkW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wlu-EX-QKZ"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="cityLabel" destination="hlC-du-GkW" id="vt8-NH-wgH"/>
-                        <outlet property="conditionImageView" destination="gly-Nf-UjR" id="njE-xz-iDB"/>
-                        <outlet property="conditionLabel" destination="XbB-tq-IO8" id="akd-2G-uc4"/>
-                        <outlet property="dayOrNightLabel" destination="4Q7-um-qjQ" id="izQ-LT-fn1"/>
-                        <outlet property="moreButton" destination="6WH-6T-DsE" id="8CR-en-jik"/>
-                        <outlet property="ragionLabel" destination="g4B-2s-bBa" id="bIZ-HI-IxG"/>
-                        <outlet property="tempratureLabel" destination="loq-jV-8us" id="cPq-cW-ZBW"/>
-                        <outlet property="timeLabel" destination="yNe-eN-C34" id="UCq-49-sqK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +98,7 @@
     </scenes>
     <resources>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
