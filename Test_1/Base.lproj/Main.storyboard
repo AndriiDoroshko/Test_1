@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,16 +90,6 @@
                             <constraint firstItem="hlC-du-GkW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wlu-EX-QKZ"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="cityLabel" destination="hlC-du-GkW" id="vt8-NH-wgH"/>
-                        <outlet property="conditionImageView" destination="gly-Nf-UjR" id="njE-xz-iDB"/>
-                        <outlet property="conditionLabel" destination="XbB-tq-IO8" id="akd-2G-uc4"/>
-                        <outlet property="dayOrNightLabel" destination="4Q7-um-qjQ" id="izQ-LT-fn1"/>
-                        <outlet property="moreButton" destination="6WH-6T-DsE" id="8CR-en-jik"/>
-                        <outlet property="ragionLabel" destination="g4B-2s-bBa" id="bIZ-HI-IxG"/>
-                        <outlet property="tempratureLabel" destination="loq-jV-8us" id="cPq-cW-ZBW"/>
-                        <outlet property="timeLabel" destination="yNe-eN-C34" id="UCq-49-sqK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
